@@ -204,8 +204,7 @@ class TaxQuery {
 
         if(isset($query_args['taxQuery']))
             unset( $query_args['taxQuery'] );
-
-        do_action( 'wonolog.log', json_encode($query_args, true));
+        
         /**
          * Retrun the $query_args
          * @since 0.0.1
