@@ -189,21 +189,23 @@ class TaxQuery {
                         unset( $value['includeChildren'] );
                     }
 
-                    $tax_query[] = [
-                        $tax_array_key => $value,
-                    ];
+                    $tax_query[ $tax_array_key ] = $value;
                 }
             }
 
-            $query_args['tax_query'] = [$tax_query['taxQuery']];
-            unset( $tax_query['taxArray'] );
-            $query_args = array_merge($query_args, $tax_query);
+            if(isset($tax_query["taxArray"])){
+                $query_args['tax_query'] = $tax_query["taxArray"];
+                unset( $tax_query['taxArray'] );
+
+            }
+
 
         } // End if().
 
         if(isset($query_args['taxQuery']))
             unset( $query_args['taxQuery'] );
 
+        do_action( 'wonolog.log', json_encode($query_args, true));
         /**
          * Retrun the $query_args
          * @since 0.0.1
