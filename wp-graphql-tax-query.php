@@ -204,7 +204,7 @@ class TaxQuery {
 
         if(isset($query_args['taxQuery']))
             unset( $query_args['taxQuery'] );
-        
+
         /**
          * Retrun the $query_args
          * @since 0.0.1
