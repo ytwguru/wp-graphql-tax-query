@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP GraphQL Tax Query
+ * Plugin Name: WP GraphQL Tax Query - YT Advisors
  * Plugin URI: https://github.com/wp-graphql/wp-graphql-tax-query
  * Description: Tax_Query support for the WPGraphQL plugin. Requires WPGraphQL version 0.0.15 or newer.
  * Author: Digital First Media, Jason Bahl
